@@ -1,5 +1,5 @@
 import assert from 'assert'
-import sixit from './index.compiled.js'
+import sixit from './index.js'
 
 class TestSixit {
   testFunctionElapsed () {
