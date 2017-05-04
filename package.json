@@ -4,16 +4,26 @@
   "description": "Like timeit in Python, run it 6 times and get the average",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "npm run build && babel test.js -o test.compiled.js && node test.compiled.js",
+    "build": "babel index.js -o index.compiled.js",
+    "clean": "rm -rf *.compiled.js"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/anqurvanillapy/sixit"
+    "url": "git+https://github.com/anqurvanillapy/sixit.git"
   },
   "keywords": [
     "timeit",
     "benchmark"
   ],
   "author": "AnqurVanillapy",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anqurvanillapy/sixit/issues"
+  },
+  "homepage": "https://github.com/anqurvanillapy/sixit#readme",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1"
+  }
 }
