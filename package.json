@@ -4,7 +4,9 @@
   "description": "Like timeit in Python, run it 6 times and get the average",
   "main": "index.js",
   "scripts": {
-    "test": "babel *.js -d dist && node dist/test.js"
+    "test": "npm run build && node dist/test.js",
+    "build": "babel *.js -d dist",
+    "clean": "rm -rf dist/"
   },
   "repository": {
     "type": "git",
