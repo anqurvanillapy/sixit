@@ -1,0 +1,19 @@
+{
+  "name": "sixit",
+  "version": "0.1.0",
+  "description": "Like timeit in Python, run it 6 times and get the average",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/anqurvanillapy/sixit"
+  },
+  "keywords": [
+    "timeit",
+    "benchmark"
+  ],
+  "author": "AnqurVanillapy",
+  "license": "ISC"
+}
