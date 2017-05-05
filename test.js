@@ -8,7 +8,6 @@ class TestSixit {
       return b
     }
 
-    // XXX: Too much difference.
     assert(oneit(sumIter, 0, 900) === 405450)
     assert(sixit(sumIter, 0, 900) === 405450)
   }
@@ -21,6 +20,29 @@ class TestSixit {
 
     assert(oneit(sumRecur, 0, 900) === 405450)
     assert(sixit(sumRecur, 0, 900) === 405450)
+  }
+
+  testIsNaN () {
+    let nan = NaN
+
+    function defaultIsNaN () {
+      let ret
+      for (let i = 0; i < 1000000; ++i) ret = isNaN(nan)
+      return ret
+    }
+
+    // Well, it is actually not optimised in some new browsers...
+    function optimisedIsNaN () {
+      let ret
+      let isNaN1 = n => { n = +n; return n !== n }
+      for (let i = 0; i < 1000000; ++i) ret = isNaN1(nan)
+      return ret
+    }
+
+    assert(oneit(defaultIsNaN, nan) === true)
+    assert(sixit(defaultIsNaN, nan) === true)
+    assert(oneit(optimisedIsNaN, nan) === true)
+    assert(sixit(optimisedIsNaN, nan) === true)
   }
 }
 
