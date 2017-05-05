@@ -6,14 +6,14 @@ elapsed time.
 ```js
 import sixit from 'sixit'
 
-function foo () {
-  let a = 0
-  for (let i = 0; i < 1000000; ++i) a += i
-  return a
+function recur (x, y) {
+  if (y > 0) return recur(x + y, y - 1)
+  else return x
 }
 
-sixit.sixit(foo)
-// => prints its average execution time
+sixit(recur, 0, 100)
+// recur: XXXms (sixit)
+// => 5050
 ```
 
 ## TODO

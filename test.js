@@ -8,8 +8,8 @@ class TestSixit {
       return b
     }
 
-    assert(oneit(sumIter, 0, 900) === 405450)
-    assert(sixit(sumIter, 0, 900) === 405450)
+    assert(oneit(sumIter, 0, 10000) === 50005000)
+    assert(sixit(sumIter, 0, 10000) === 50005000)
   }
 
   testRecursiveFunction () {
@@ -18,8 +18,8 @@ class TestSixit {
       else return b
     }
 
-    assert(oneit(sumRecur, 0, 900) === 405450)
-    assert(sixit(sumRecur, 0, 900) === 405450)
+    assert(oneit(sumRecur, 0, 10000) === 50005000)
+    assert(sixit(sumRecur, 0, 10000) === 50005000)
   }
 
   testIsNaN () {
