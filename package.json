@@ -1,6 +1,6 @@
 {
   "name": "sixit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Like timeit in Python, run it 6 times and get the average",
   "main": "index.js",
   "scripts": {
