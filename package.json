@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run build && node dist/test.js",
     "build": "babel *.js -d dist",
+    "watch": "npm run build -- -w",
     "clean": "rm -rf dist/"
   },
   "repository": {
